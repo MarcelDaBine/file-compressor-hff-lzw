@@ -1,5 +1,5 @@
 //
-// Created by rafae on 1/12/2024.
+// Created by rafae on 1/5/2024.
 //
 
 #ifndef COMPRESIONE_NODE_HUFFMAN_H

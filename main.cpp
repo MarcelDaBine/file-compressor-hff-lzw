@@ -4,15 +4,26 @@
 
 #include "inc/huffman_compressor.h"
 #include "inc/LZW.h"
-#include <memory>
 #include <algorithm>
 #include <string>
 
+/**
+ * @file main.cpp
+ * @brief The main of this project.
+ * @author Rafael Costin Balan
+ * @date 2024-01-05
+ * @version 1.0
+ * @details It first creates the compressors, and compresses/decompresses, based on the inputs, while showing informative data.
+ * @copyright Rafael Public License
+ */
+
 int main(int argc, char* argv[]){
+    // Creates the compressors.
     LZW lzwCompressor;
     huffman_compressor huffmanCompressor;
     std::string file, compressor_name, suffix;
 
+    // If the user chooses to compress, they must also choose a compression method.
     if(argc == 3){
         file = argv[1];
         suffix = (file.size() > 4) ? file.substr(file.size() - 4): "";
@@ -29,6 +40,7 @@ int main(int argc, char* argv[]){
         }
         else std::cerr<<"\nNo available compression typed, input should be 'filename compression_method'(LZW/Huffman)\n\n";
     }
+    // If the user chooses to decompress
     else if(argc == 2){
         file = argv[1];
         suffix = (file.size() > 4) ? file.substr(file.size() - 4): "";

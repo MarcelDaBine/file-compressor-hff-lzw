@@ -1,5 +1,5 @@
 //
-// Created by rafae on 1/8/2024.
+// Created by rafae on 1/4/2024.
 //
 /**
  * @file huffman_compressor.h
@@ -7,7 +7,7 @@
  * @author Rafael Costin Balan
  * @date 2024-01-05
  * @version 1.0
- * @details Contains the class huffman_compressor that compresses/decompresses files using a slightly modified version of the Huffman compression algorithm.
+ * @details Contains the adapter huffman_compressor that compresses/decompresses files using a slightly modified version of the Huffman compression algorithm.
  * @copyright CES Public License
  */
 
@@ -30,7 +30,15 @@
 class huffman_compressor : public compressor{
      huffman m_huffman;
 public:
+    /*
+    * Compresses the file using the Huffman method to another file, it also adds the dictionary for decompressing purposes.
+    * @param Name of the file to be compressed.
+    */
     void compress(std::string& filename) override;
+    /*
+    * Decompresses the file by reading the dictionary to another file.
+    * @param Name of the file to be decompressed.
+    */
     void decompress(const std::string& filename) override;
 };
 
