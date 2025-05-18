@@ -12,7 +12,7 @@
  */
 #include "../inc/huffman_compressor.h"
 
-void huffman_compressor::compress(std::string& filename) {
+void huffman_compressor::compress(const std::string& filename) {
     // Opens the original file if it exists.
     std::fstream f(filename);
     if(!f.is_open()) throw std::runtime_error("Couldn't open file.");

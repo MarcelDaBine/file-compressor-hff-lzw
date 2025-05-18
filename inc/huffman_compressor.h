@@ -34,7 +34,7 @@ public:
     * Compresses the file using the Huffman method to another file, it also adds the dictionary for decompressing purposes.
     * @param Name of the file to be compressed.
     */
-    void compress(std::string& filename) override;
+    void compress(const std::string& filename) override;
     /*
     * Decompresses the file by reading the dictionary to another file.
     * @param Name of the file to be decompressed.

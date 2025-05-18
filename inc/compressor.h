@@ -22,12 +22,13 @@ public:
      * A virtual function that makes the classes that inherit need to be able to compress files.
      * @param filename represent the name of the file which is going to be compressed.
      */
-    virtual void compress(std::string& filename) = 0;
+    virtual void compress(const std::string& filename) = 0;
     /*
     * A virtual function that makes the classes that inherit need to be able to decompress files.
     * @param filename represent the name of the file which is going to be decompressed.
     */
     virtual void decompress(const std::string& filename) = 0;
+    virtual ~compressor() = default;
 };
 
 #endif //COMPRESIONE_COMPRESSOR_H

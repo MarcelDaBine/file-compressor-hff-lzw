@@ -21,13 +21,13 @@
 /**
  * This file contains LZW class, which inherits from the compressor interface, to compress/decompress files.
  */
-class LZW: public compressor{
+class LZW final : public compressor{
 public:
     /*
     * Compresses the file using the LZW method to another file.
     * @param Name of the file to be compressed.
     */
-    void compress(std::string& filename) override;
+    void compress(const std::string& filename) override;
     /*
     * Decompresses the file by reading the dictionary to another file.
     * @param Name of the file to be decompressed.
